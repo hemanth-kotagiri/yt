@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/mpaulson/personal/yt/ds/linked_list/build",
-  "command": "/usr/lib/ccache/cc     -o CMakeFiles/linked_list.dir/src/ll.c.o   -c /home/mpaulson/personal/yt/ds/linked_list/src/ll.c",
-  "file": "/home/mpaulson/personal/yt/ds/linked_list/src/ll.c"
-}
-]

@@ -1,25 +1,30 @@
 #include <stdlib.h>
 
+//
+// QUEUE implementation only.
+//
+// Should be pretty straight foward to understand
+//
 struct Node {
     int data;
     struct Node* next;
 };
 
-struct LinkedList {
+struct Queue {
     struct Node* head;
     struct Node* tail;
     size_t size;
 };
 
-struct LinkedList* create_linked_list() {
-    struct LinkedList* list = (struct LinkedList*)malloc(sizeof(struct LinkedList));
+struct Queue* create_queue() {
+    struct Queue* list = (struct Queue*)malloc(sizeof(struct Queue));
     list->size = 0;
     list->head = list->tail = NULL;
 
     return list;
 }
 
-int linked_list_push(struct LinkedList* list, int data) {
+int queue_push(struct Queue* list, int data) {
     struct Node* item = (struct Node*)malloc(sizeof(struct Node));
     item->data = data;
     item->next = NULL;
@@ -33,7 +38,7 @@ int linked_list_push(struct LinkedList* list, int data) {
     return ++list->size;
 }
 
-int linked_list_pop(struct LinkedList* list) {
+int queue_pop(struct Queue* list) {
     if (list->size == 0) {
         return 0;
     }
