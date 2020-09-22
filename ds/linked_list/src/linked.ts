@@ -24,7 +24,7 @@ export interface IDoublyLinked<T> {
     pop(): T | null; // O(1)
     getAt(index: number): T; // O(n)
     insertAt(index: number, data: T): void; // O(n)
-    removeAt(index: number): void; // O(n)
+    removeAt(index: number): T; // O(n)
     size(): number;
 }
 
@@ -65,6 +65,10 @@ export class Queue<T> implements IQueue<T> {
         const item = this.head.data;
         this.head = this.head.next;
         --this._size;
+
+        if (!this._size) {
+            this.tail = null;
+        }
 
         return item;
     }
