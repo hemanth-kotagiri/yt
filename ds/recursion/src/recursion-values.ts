@@ -1,9 +1,9 @@
 export enum Dir {
-    Up,
-    Down,
-    Left,
-    Right,
-    None
+    Up = 0,
+    Down = 1,
+    Left = 2,
+    Right = 3,
+    None = 4
 }
 
 // TODO: EDIT THESE VARIABLES FOR DIFFERENT EXPERIENCES!!!
@@ -32,12 +32,19 @@ export const map: string[][] =
     slice(1).
     map((x: string) => x.split(''));
 
-export const dirs = [
-    [Dir.Down, 1, 0],
-    [Dir.Left, 0, -1],
-    [Dir.Up, -1, 0],
-    [Dir.Right, 0, 1],
+const dirAmounts = [
+    [-1, 0],
+    [1, 0],
+    [0, -1],
+    [0, 1],
 ];
 
-export const runYours = true;
+export const dirs = [
+    [Dir.Left, ...dirAmounts[Dir.Left]],
+    [Dir.Down, ...dirAmounts[Dir.Down]],
+    [Dir.Right, ...dirAmounts[Dir.Right]],
+    [Dir.Up, ...dirAmounts[Dir.Up]],
+];
+
+export const runYours = false;
 

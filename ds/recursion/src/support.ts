@@ -6,7 +6,7 @@ const rl = readline.createInterface({
 });
 
 import {
-    log,
+    runYours,
     dirs,
     Dir,
     map,
