@@ -2,7 +2,7 @@
 //
 // THIS IS FOR YOU
 function recurseTheMaze(map: string[][], seen: boolean[][], r: number, c: number): boolean {
-    throw new Error("You need to fill this in or change the `log` variable to true for the logging walk.");
+    throw new Error("You need to fill this in or change the `runYours` variable to `false` for the logging walk.");
 }
 
 
